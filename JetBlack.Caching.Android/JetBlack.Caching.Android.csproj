@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{628CA4C5-0D38-416C-8E46-D8E4BD3CE0FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JetBlack.Caching.Android</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AssemblyName>JetBlack.Caching.Android</AssemblyName>
+    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="..\JetBlack.Caching\DisposableValue.cs">
+      <Link>DisposableValue.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Concurrent\ConcurrentTimeoutDictionary.cs">
+      <Link>Collections\Concurrent\ConcurrentTimeoutDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Generic\CircularBuffer.cs">
+      <Link>Collections\Generic\CircularBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Generic\CircularList.cs">
+      <Link>Collections\Generic\CircularList.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Generic\ICircularBuffer.cs">
+      <Link>Collections\Generic\ICircularBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Generic\KeyValuePair.cs">
+      <Link>Collections\Generic\KeyValuePair.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Generic\TimeoutDictionary.cs">
+      <Link>Collections\Generic\TimeoutDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\ArrayPool.cs">
+      <Link>Collections\Specialized\ArrayPool.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\Block.cs">
+      <Link>Collections\Specialized\Block.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\CachingDictionary.cs">
+      <Link>Collections\Specialized\CachingDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\ConcurrentArrayPool.cs">
+      <Link>Collections\Specialized\ConcurrentArrayPool.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\FileStreamHeap.cs">
+      <Link>Collections\Specialized\FileStreamHeap.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\Handle.cs">
+      <Link>Collections\Specialized\Handle.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\Heap.cs">
+      <Link>Collections\Specialized\Heap.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\ICache.cs">
+      <Link>Collections\Specialized\ICache.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\IHeap.cs">
+      <Link>Collections\Specialized\IHeap.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\IHeapManager.cs">
+      <Link>Collections\Specialized\IHeapManager.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\LightweightHeapManager.cs">
+      <Link>Collections\Specialized\LightweightHeapManager.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\PersistentDictionary.cs">
+      <Link>Collections\Specialized\PersistentDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\SerializingCache.cs">
+      <Link>Collections\Specialized\SerializingCache.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\StreamHeap.cs">
+      <Link>Collections\Specialized\StreamHeap.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Timing\DateTimeProvider.cs">
+      <Link>Timing\DateTimeProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Timing\FastDateTime.cs">
+      <Link>Timing\FastDateTime.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Timing\IDateTimeProvider.cs">
+      <Link>Timing\IDateTimeProvider.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+</Project>

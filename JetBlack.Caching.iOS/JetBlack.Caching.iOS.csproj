@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{63F04FFB-A98F-4DAA-9870-80527037DD61}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JetBlack.Caching.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>JetBlack.Caching.iOS</AssemblyName>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Collections\" />
+    <Folder Include="Timing\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\JetBlack.Caching\Collections\Concurrent\ConcurrentTimeoutDictionary.cs">
+      <Link>Collections\Concurrent\ConcurrentTimeoutDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Generic\CircularBuffer.cs">
+      <Link>Collections\Generic\CircularBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Generic\CircularList.cs">
+      <Link>Collections\Generic\CircularList.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Generic\ICircularBuffer.cs">
+      <Link>Collections\Generic\ICircularBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Generic\KeyValuePair.cs">
+      <Link>Collections\Generic\KeyValuePair.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Generic\TimeoutDictionary.cs">
+      <Link>Collections\Generic\TimeoutDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\ArrayPool.cs">
+      <Link>Collections\Specialized\ArrayPool.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\Block.cs">
+      <Link>Collections\Specialized\Block.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\CachingDictionary.cs">
+      <Link>Collections\Specialized\CachingDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\ConcurrentArrayPool.cs">
+      <Link>Collections\Specialized\ConcurrentArrayPool.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\FileStreamHeap.cs">
+      <Link>Collections\Specialized\FileStreamHeap.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\Handle.cs">
+      <Link>Collections\Specialized\Handle.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\Heap.cs">
+      <Link>Collections\Specialized\Heap.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\ICache.cs">
+      <Link>Collections\Specialized\ICache.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\IHeap.cs">
+      <Link>Collections\Specialized\IHeap.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\IHeapManager.cs">
+      <Link>Collections\Specialized\IHeapManager.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\LightweightHeapManager.cs">
+      <Link>Collections\Specialized\LightweightHeapManager.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\PersistentDictionary.cs">
+      <Link>Collections\Specialized\PersistentDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\SerializingCache.cs">
+      <Link>Collections\Specialized\SerializingCache.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Collections\Specialized\StreamHeap.cs">
+      <Link>Collections\Specialized\StreamHeap.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Timing\DateTimeProvider.cs">
+      <Link>Timing\DateTimeProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Timing\FastDateTime.cs">
+      <Link>Timing\FastDateTime.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\Timing\IDateTimeProvider.cs">
+      <Link>Timing\IDateTimeProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\JetBlack.Caching\DisposableValue.cs">
+      <Link>JetBlack.Caching\DisposableValue.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
